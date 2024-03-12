@@ -4,9 +4,11 @@ WORKDIR /DataLens/
 
 COPY package.json ./
 
-RUN npm i
+RUN npm install
 
 COPY . .
+
+RUN npm install chart.js
 
 RUN npm run build
 
