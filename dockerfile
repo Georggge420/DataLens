@@ -10,6 +10,8 @@ COPY . .
 
 RUN npm install chart.js
 
+RUN npm install mongoose --save
+
 RUN npm run build
 
 CMD ["npm", "run", "dev"]
