@@ -1,17 +1,11 @@
 FROM node:18
 
-WORKDIR /DataLens/
+WORKDIR /datalens
 
 COPY package.json ./
 
 RUN npm install
 
 COPY . .
-
-RUN npm install chart.js
-
-RUN npm install mongoose --save
-
-RUN npm run build
 
 CMD ["npm", "run", "dev"]
