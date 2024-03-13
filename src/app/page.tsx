@@ -12,7 +12,7 @@ export default function Home() {
           height={500}
         />
       </div>
-      <div>ya nmms</div>
+      <div>JAJAAJJA</div>
       
 
     </main>

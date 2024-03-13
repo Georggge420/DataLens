@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start-watch": "WATCHPACH_POLLING=true next start",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start-watch": "WATCHPACK_POLLING=true next start",
     "lint": "next lint"
   },
   "dependencies": {
