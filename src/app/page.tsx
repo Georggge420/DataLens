@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <h1>que pedo</h1>
+        <h1>epa epa</h1>
         <Image
           src="/favicon.ico"
           alt="Next.js Logo"
@@ -12,7 +12,7 @@ export default function Home() {
           height={500}
         />
       </div>
-      <div>no we</div>
+      <div>todo bien</div>
       
 
     </main>
