@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <h1>epa epa</h1>
+        <h1>PUTOOOOOS todoooos</h1>
         <Image
           src="/favicon.ico"
           alt="Next.js Logo"
