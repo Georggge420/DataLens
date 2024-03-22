@@ -4,13 +4,8 @@ export default function Home() {
   return (
     <main>
       <div>
-        <h1>PUTOOOOOS todoooos</h1>
-        <Image
-          src="/favicon.ico"
-          alt="Next.js Logo"
-          width={500}
-          height={500}
-        />
+        <h1>DataLens</h1>
+        
       </div>
       <div>todo bien</div>
       
