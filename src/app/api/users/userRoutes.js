@@ -32,6 +32,15 @@ export async function POST(req) {
 }
 
 export async function DELETE(req) {
-  await connectMongoDB();
-  await user.findByIdAndDelete(req.body.id);
+  try {
+    await connectMongoDB();
+    await user.findByIdAndDelete(req.body.id);
+    return NextResponse.json({ message: "User deleted" });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json(
+      { message: "Error deleting user" },
+      { status: 500 }
+    );
+  }
 }
