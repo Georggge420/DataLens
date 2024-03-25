@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import HeaderMobile from "@/components/HeaderMobile";
+import Sidebar from "@/components/Sidebar";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,12 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <HeaderMobile />
-        
-        {children}
-        
+      <body className={ `bg-white ${inter.className}`}>
+        <div className="flex">
+        <Sidebar />
+          <main className="flex-1">
+            <Header />
+            <HeaderMobile />
+            {children}
+          </main>
+        </div>
         </body>
     </html>
   );
