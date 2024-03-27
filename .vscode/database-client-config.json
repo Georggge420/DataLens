@@ -1,0 +1,30 @@
+{
+    "nosql": {
+        "1711503574733": {
+            "host": "127.0.0.1",
+            "port": 27017,
+            "dbType": "MongoDB",
+            "name": "dataLens",
+            "advance": {
+                "hideSystemSchema": true
+            },
+            "timezone": "+00:00",
+            "useConnectionString": true,
+            "connectionUrl": "mongodb+srv://corteskitaroage:V4BShSEwCMuQyQ6h@cluster0.ytjurps.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+            "usingSSH": false,
+            "useSocksProxy": false,
+            "useHTTPProxy": false,
+            "global": false,
+            "savePassword": "Forever",
+            "readonly": false,
+            "sort": 12,
+            "useSSL": false,
+            "fs": {
+                "showHidden": true
+            },
+            "key": "1711503574733",
+            "connectionKey": "nosql.connections"
+        }
+    },
+    "$schema": "http://127.0.0.1:8828/schema.json"
+}
