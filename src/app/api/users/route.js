@@ -18,14 +18,15 @@ export async function GET(req) {
 
 export async function POST(req) {
   try {
+    const { name, email } = await req.json();
     await connectMongoDB(); // conectando a la base de datos
-    const newUser = new user(req.body); // creando un nuevo usuario
+    const newUser = new user({ name, email }); // creando un nuevo usuario
     await newUser.save(); // guardando el usuario
     return NextResponse.json({ message: "User created" }, { status: 201 });
   } catch (err) {
     console.error(err);
     return NextResponse.json(
-      { message: "Error creating user" },
+      { message: "Error creating user", error: err },
       { status: 500 }
     );
   }
