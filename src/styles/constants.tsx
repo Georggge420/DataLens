@@ -14,35 +14,56 @@ export const SIDEVARITEMS: SideNavItem[] = [
     },
     {
         title: "Facebook",
-        path: "/facebookboard",
+        path: "/facebookBoard",
         icon: <Icon icon="brandico:facebook" />
     },
     {
         title: "Instagram",
-        path: "/instragramboard",
+        path: "/instragramBoard",
         icon: <Icon icon="entypo-social:instagram" />
     },
     {
         title: "Spotify",
-        path: "/spotifyboard",
+        path: "/spotifyBoard",
         icon: <Icon icon="entypo-social:spotify" />,
     },
     {
         title: "Configuracion",
         icon: <Icon icon="ant-design:setting-outlined" />,
         submenu: true,
+        level: 1,
         subMenuItems: [
             {
                 title: "Idioma",
-                path: "/Configuracion/Idioma",
-                icon: <Icon icon="flowbite:arrow-sort-letters-outline" />
+                icon: <Icon icon="flowbite:arrow-sort-letters-outline" />,
+                submenu: true,
+                level: 2,
+                subMenuItems: [
+
+                    {title: "Español",
+                    level: 3,
+                    },
+
+                    {title: "Ingles",
+                    level: 3,
+                    }
+                ]
             },
             {
                 title: "Tema",
-                path: "/Configuracion/Tema",
-                icon: <Icon icon="flowbite:moon-solid" />
+                icon: <Icon icon="flowbite:moon-solid" />,
+                submenu: true,
+                level: 2,
+                subMenuItems: [
+                    {title: "Claro",
+                    level: 3,
+                    },
+                    {title: "Oscuro",
+                    level: 3,
+                    }
+                ]
             },
-        ]
+        ],
     },
 
 ]
