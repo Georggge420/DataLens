@@ -7,7 +7,7 @@ export async function GET(request, { params }) {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "e757c21034msh7ad415748f3a9c7p136597jsn91c4629b5364",
+      "X-RapidAPI-Key": "f1cd554c92msh570b67ee95fa123p126c6djsn4d138eb347ce",
       "X-RapidAPI-Host": "instagram-data1.p.rapidapi.com",
     },
   };
