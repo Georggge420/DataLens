@@ -7,9 +7,6 @@ import Sidebar from "@/components/Sidebar";
 import PageWrapper from "@/components/page-wrapper";
 import MarginWidthWrapper from "@/components/margin-width-wrapper";
 
-
-
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

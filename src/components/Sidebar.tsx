@@ -80,7 +80,7 @@ const MenuItem = ({item}:{item: SideNavItem}) => {
                       <button
                         onClick={() => toggleSubSubMenu(idx)}
                         className={`${
-                          openedSubItem[idx] ? 'mt-12' : 'mt-0'
+                          openedSubItem[idx] ? 'mt-14' : 'mt-0'
                         }`}
                       >
                         <MenuItem item={subItem}/>
