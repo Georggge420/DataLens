@@ -2,6 +2,8 @@
 
 # enlace: https://rapidapi.com/davethebeast/api/twitter241
 
+500 solicitudes al mes
+
 {
 "result": {
 "result": {
