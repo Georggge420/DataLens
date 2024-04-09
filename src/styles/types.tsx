@@ -6,8 +6,3 @@ export type SideNavItem = {
     subMenuItems?: SideNavItem[];
     level?: number;
 }
-
-export type MenuItemWithSubMenuProps = {
-    item: SideNavItem;
-    toggleOpen: () => void;
-};

@@ -1,14 +1,17 @@
 [
     {
         "label": "Enero",
-        "value": 32
+        "value": 32,
+        "interacciones": 66
     },
     {
         "label": "Febrero",
-        "value": 12
+        "value": 12,
+        "interacciones": 45
     },
     {
         "label": "Marzo",
-        "value": 55
+        "value": 55,
+        "interacciones": 87
     }
 ]
