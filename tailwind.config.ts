@@ -26,7 +26,14 @@ const config: Config = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+
+   
+
     extend: {
+      fontFamily: {
+        bungee: ['Bungee'],
+      },
+
       colors: {
         'negroOscuro': '#1E2022',
         'negroClaro': '#34373B',
