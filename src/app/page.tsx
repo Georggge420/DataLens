@@ -1,6 +1,5 @@
 "use client"
 
-import localFont from "next/font/local"
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { RiThumbUpFill, RiThumbDownFill } from 'react-icons/ri';
 import Image from "next/image";
@@ -8,6 +7,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import sourceData from "@/data/sourceData.json";
 import {ButtonLPrimary, ButtonSPrimary} from "@/components/buttons";
+
 
 export default function Home() {
 
@@ -31,6 +31,8 @@ export default function Home() {
       <div className="p-5 text-left text-grisOscuro text-2xl font-bold font-bungee">
         DATALENS
       </div>
+
+      
 
       <div className="sm:p-10 xs:p-2 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1">
 
@@ -122,7 +124,7 @@ export default function Home() {
               <p><Link href={markData.result.twitter}><Icon icon="line-md:twitter-x" className='me-1' height="2em" color="gray"/></Link></p>
               <p><Link href={markData.result.instagram}><Icon icon="line-md:instagram" className='me-1' height="2em" color="gray"/></Link></p>
               <p><Link href={markData.result.snapchat}><Icon icon="bxl:snapchat" className='me-1' height="2em" color="gray"/></Link></p>
-          </div>
+            </div>
           )}
       </div>
 

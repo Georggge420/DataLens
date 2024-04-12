@@ -5,22 +5,23 @@ interface ButtonProps {
   text: string;
   type?: 'button' | 'submit' | 'reset';
   className?: string;
+  onClick?: () => void;
 }
 
-export const ButtonSPrimary: React.FC<ButtonProps> = ({ type, text, className }) => (
-    <button type={type} className={`px-4 py-2 bg-blancoOpaco text-negroOscuro rounded-lg md:w-full w-auto h-full text-base font-bold hover:bg-grisOscuro hover:text-blancoClaro ${className}`}>
+export const ButtonSPrimary: React.FC<ButtonProps> = ({ type, text, className, onClick }) => (
+    <button type={type} onClick={onClick} className={`px-4 py-2 bg-blancoOpaco text-negroOscuro rounded-lg md:w-full w-auto h-full text-base font-bold hover:bg-grisOscuro hover:text-blancoClaro ${className}`}>
       {text}
     </button>
 );
 
-export const ButtonSSecond: React.FC<ButtonProps> = ({ type, text, className }) => (
-      <button type={type} className={`px-4 py-2 bg-negroClaro text-blancoClaro rounded-lg md:w-full w-auto h-full text-base font-bold hover:bg-grisMedio ${className}`}>
+export const ButtonSSecond: React.FC<ButtonProps> = ({ type, text, className, onClick }) => (
+      <button type={type} onClick={onClick} className={`px-4 py-2 bg-negroClaro text-blancoClaro rounded-lg md:w-full w-auto h-full text-base font-bold hover:bg-grisMedio ${className}`}>
         {text}
       </button>
   );
 
-export const ButtonSOutLine: React.FC<ButtonProps> = ({ type, text, className }) => (
-      <button type={type} className={`px-4 py-2 bg-blancoClaro text-negroOscuro outline outline-negroOscuro hover:outline-dashed rounded-lg md:w-full w-auto h-full text-base font-bold ${className}`}>
+export const ButtonSOutLine: React.FC<ButtonProps> = ({ type, text, className, onClick }) => (
+      <button type={type} onClick={onClick} className={`px-4 py-2 bg-blancoClaro text-negroOscuro outline outline-negroOscuro hover:outline-dashed rounded-lg md:w-full w-auto h-full text-base font-bold ${className}`}>
         {text}
       </button>
   );
