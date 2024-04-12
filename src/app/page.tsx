@@ -1,5 +1,6 @@
 "use client"
 
+import localFont from "next/font/local"
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { RiThumbUpFill, RiThumbDownFill } from 'react-icons/ri';
 import Image from "next/image";
@@ -7,8 +8,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import sourceData from "@/data/sourceData.json";
 import {ButtonLPrimary, ButtonSPrimary} from "@/components/buttons";
-
-
 
 export default function Home() {
 
@@ -29,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="p-2">
-      <div className="p-5 text-left text-grisOscuro text-2xl font-bold">
+      <div className="p-5 text-left text-grisOscuro text-2xl font-bold font-bungee">
         DATALENS
       </div>
 
