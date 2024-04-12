@@ -17,7 +17,7 @@ export default function Xboard() {
     const [userData, setUserData] = useState(null);
     const [userNotFound, setUserNotFound] = useState(false);
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
     
         const response = await fetch(`/api/xTwitter/users/${username}`);
@@ -38,18 +38,23 @@ export default function Xboard() {
             <div className="p-5 text-left text-grisOscuro text-2xl font-bold">
                 X
             </div>
-            
-            <div className='m-5 p-3 bg-blancoClaro rounded-2xl grid gap-4 md:grid-auto-cols:minmax(0, auto); xs:grid-auto-rows:minmax(0, auto); lg:grid-cols-12 xs:grid-cols-1'>
 
+            <div className="p-5 text-left text-grisOscuro text-2xl font-bold lg:col-span-12 sm:col-span-2 xs:col-span-1">
+                    Buscador de usuario
+            </div>
+
+            <p className="px-7 text-justify font-semibold italic xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs lg:col-span-12 sm:col-span-2 xs:col-span-1">
+                Consulta la informacion del usuario de X que desees.
+            </p>
+            
+            <div className='m-5 p-5 bg-blancoClaro rounded-2xl grid gap-4 md:grid-auto-cols:minmax(0, auto); xs:grid-auto-rows:minmax(0, auto); lg:grid-cols-12 xs:grid-cols-1'>
+            
                 <div className='flex items-center justify-center h-full xs:row-start-1 lg:col-span-6 sm:row-span-1 xs:row-span-1'>
                     <form onSubmit={handleSubmit} className='p-5 grid grid-cols-12 gap-6 bg-blancoOpaco rounded-xl lg:grid-cols-12 md:grid-cols-6 xs:grid-cols-2 xl:max-h-[104px] xs:max-h-[145px]'>
                         <input
                             type="text"
                             value={username}
-                            onChange={(e) => {
-                                setUsername(e.target.value)
-                                handleSubmit(e);
-                            }}
+                            onChange={(e) => setUsername(e.target.value)}
                             placeholder="usuario"
                             className='text-center p-2 w-full bg-grisClaro rounded-lg text-negroOscuro text-base font-bold col-span-12 lg:col-span-8 md:col-span-6 xs:col-span-2'
                         />
@@ -74,7 +79,6 @@ export default function Xboard() {
                                         quality={100}
                                         layout='responsive'
                                     />
-
                                 </div>
 
                                 <p className='p-1 text-negroOscuro font-bold rounded-xl row-span-1 col-span-2 flex items-center'>

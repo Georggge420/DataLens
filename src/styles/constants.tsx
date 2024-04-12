@@ -13,19 +13,14 @@ export const SIDEVARITEMS: SideNavItem[] = [
         icon: <Icon icon="fa6-brands:x-twitter" />
     },
     {
-        title: "Facebook",
-        path: "/facebookBoard",
-        icon: <Icon icon="brandico:facebook" />
-    },
-    {
         title: "Instagram",
-        path: "/instragramBoard",
+        path: "/instagramBoard",
         icon: <Icon icon="entypo-social:instagram" />
     },
     {
-        title: "Spotify",
-        path: "/spotifyBoard",
-        icon: <Icon icon="entypo-social:spotify" />,
+        title: "YouTube",
+        path: "/YoutubeBoard",
+        icon: <Icon icon="mdi:youtube" />,
     },
     {
         title: "Configuracion",

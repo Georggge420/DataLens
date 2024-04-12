@@ -4,9 +4,10 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { RiThumbUpFill, RiThumbDownFill } from 'react-icons/ri';
 import Image from "next/image";
 import { useState } from 'react';
-import { Bar, Doughnut, Line } from "react-chartjs-2";
+import Link from 'next/link';
 import sourceData from "@/data/sourceData.json";
 import {ButtonLPrimary, ButtonSPrimary} from "@/components/buttons";
+
 
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
     const [mark, setMark] = useState('');
     const [markData, setMarkData] = useState(null);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const response = await fetch(`api/contacts/${mark}`);
@@ -31,8 +32,6 @@ export default function Home() {
       <div className="p-5 text-left text-grisOscuro text-2xl font-bold">
         DATALENS
       </div>
-
-      
 
       <div className="sm:p-10 xs:p-2 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1">
 
@@ -99,30 +98,32 @@ export default function Home() {
           Search Marca <Icon icon="line-md:search-filled" className='ms-1' height="30px" color="gray"/>
       </div>
 
-      <div>
-          <p className="sm:p-10 xs:p-2 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1">
+      <div className="sm:p-10 xs:p-2 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1">
+
+          <p className="text-justify font-semibold italic xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs lg:col-span-4 sm:col-span-2 xs:col-span-1">
             Busca el contacto de la marca que buscas y obtén información sobre su presencia en redes sociales.
           </p>
 
-          <form onSubmit={handleSubmit}>
+        <div className="lg:col-span-2 h-full w-full relative flex items-center justify-center">
+          <form onSubmit={handleSubmit} className="p-5 grid gap-4 lg:grid-cols-8 lg:grid-rows-1 xs:grid-cols-1 xs:grid-rows-2">
             <input 
               type="text" 
               value={mark} 
               onChange={(e) => setMark(e.target.value)} 
-              placeholder="Escribe el nombre de la marca"
+              placeholder="Nombre de la marca"
+              className="text-center p-2 w-full bg-grisClaro rounded-lg text-negroOscuro text-base font-bold lg:col-span-5 xs:col-span-1 xs:row-span-1"
             />
-            <ButtonSPrimary type='submit' text='Buscar Contacto' className='bg-grisClaro col-span-12 lg:col-span-4 md:col-span-6 xs:col-span-2'/>
+            <ButtonSPrimary type='submit' text='Buscar' className='bg-grisClaro col-span-12 lg:col-span-3 xs:col-span-1 xs:row-span-1'/>
           </form>
+        </div>
 
           {markData && (
-            <div>
-              <p>Emails: {markData.emails}</p>
-              <p>Phones: {markData.phones}</p>
-              <p>LinkedIn: <a href={markData.linkedin}>{markData.linkedin}</a></p>
-              <p>Twitter: <a href={markData.twitter}>{markData.twitter}</a></p>
-              <p>Instagram: <a href={markData.instagram}>{markData.instagram}</a></p>
-              <p>Snapchat: <a href={markData.snapchat}>{markData.snapchat}</a></p>
-            </div>
+            <div className="p-3 bg-negroClaro rounded-lg grid gap-5 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 lg:grid-rows-1 lg:col-span-2 place-items-center sm:grid-rows-4 sm:grid-cols-1 xs:grid-auto-rows:minmax(0, auto); xs:grid-cols-4">
+              <p><Link href={markData.result.linkedin}><Icon icon="entypo-social:linkedin" className='me-1' height="2em" color="gray"/></Link></p>
+              <p><Link href={markData.result.twitter}><Icon icon="line-md:twitter-x" className='me-1' height="2em" color="gray"/></Link></p>
+              <p><Link href={markData.result.instagram}><Icon icon="line-md:instagram" className='me-1' height="2em" color="gray"/></Link></p>
+              <p><Link href={markData.result.snapchat}><Icon icon="bxl:snapchat" className='me-1' height="2em" color="gray"/></Link></p>
+          </div>
           )}
       </div>
 
