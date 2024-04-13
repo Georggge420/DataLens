@@ -22,9 +22,9 @@ export async function GET(req) {
 export async function POST(req) {
   //funcionando
   try {
-    const { name, email } = await req.json();
+    const { name, email, password } = await req.json();
     await connectMongoDB();
-    const newUser = new user({ name, email });
+    const newUser = new user({ name, email, password });
     await newUser.save();
     return NextResponse.json({ message: "User created" }, { status: 201 });
   } catch (err) {

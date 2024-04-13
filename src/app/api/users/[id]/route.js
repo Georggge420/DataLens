@@ -24,7 +24,7 @@ export async function GET(req, { params }) {
   }
 }
 
-// borrando usuario por di en el url
+// borrando usuario por id en el url
 export async function DELETE(req, { params }) {
   try {
     await connectMongoDB();
@@ -53,11 +53,15 @@ export async function PUT(req, { params }) {
     await connectMongoDB();
 
     const { id } = params;
-    const { newName: name, newEmail: email } = await req.json;
+    const {
+      newName: name,
+      newEmail: email,
+      newPassword: password,
+    } = await req.json();
 
     const user = await User.findByIdAndUpdate(
       id,
-      { name, email },
+      { name, email, password },
       { new: true }
     );
 
