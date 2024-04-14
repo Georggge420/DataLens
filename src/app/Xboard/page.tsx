@@ -47,10 +47,10 @@ export default function Xboard() {
                 Consulta la informacion del usuario de X que desees.
             </p>
             
-            <div className='m-5 p-5 bg-blancoClaro rounded-2xl grid gap-4 md:grid-auto-cols:minmax(0, auto); xs:grid-auto-rows:minmax(0, auto); lg:grid-cols-12 xs:grid-cols-1'>
+            <div className='m-5 p-5 rounded-2xl grid gap-4 md:grid-auto-cols:minmax(0, auto); xs:grid-auto-rows:minmax(0, auto); lg:grid-cols-12 xs:grid-cols-1'>
             
                 <div className='flex items-center justify-center h-full xs:row-start-1 lg:col-span-6 sm:row-span-1 xs:row-span-1'>
-                    <form onSubmit={handleSubmit} className='p-5 grid grid-cols-12 gap-6 bg-blancoOpaco rounded-xl lg:grid-cols-12 md:grid-cols-6 xs:grid-cols-2 xl:max-h-[104px] xs:max-h-[145px]'>
+                    <form onSubmit={handleSubmit} className='p-5 grid grid-cols-12 gap-6  rounded-xl lg:grid-cols-12 md:grid-cols-6 xs:grid-cols-2 xl:max-h-[104px] xs:max-h-[145px]'>
                         <input
                             type="text"
                             value={username}
@@ -63,7 +63,7 @@ export default function Xboard() {
                 </div>
 
                 {userNotFound ? (
-                        <div className='bg-blancoOpaco w-full h-full rounded-2xl p-5 lg:col-span-6 xs:col-span-1 sm:row-span-2 xs:row-span-1 border-solid border-2 border-blancoClaro'>
+                        <div className=' w-full h-full rounded-2xl p-5 lg:col-span-6 xs:col-span-1 sm:row-span-2 xs:row-span-1 border-solid border-2 border-blancoClaro'>
                             <p>Usuario no encontrado</p>
                             <Image src="/path/to/your/image.jpg" alt="User not found" width={50} height={50} />
                         </div>

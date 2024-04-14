@@ -6,6 +6,7 @@ import HeaderMobile from "@/components/HeaderMobile";
 import Sidebar from "@/components/Sidebar";
 import PageWrapper from "@/components/page-wrapper";
 import MarginWidthWrapper from "@/components/margin-width-wrapper";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
               <PageWrapper>
                 {children}  
               </PageWrapper>
+              <Footer />
             </MarginWidthWrapper>
           </main>
         </div>

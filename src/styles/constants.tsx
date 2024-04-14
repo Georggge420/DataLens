@@ -5,7 +5,7 @@ export const SIDEVARITEMS: SideNavItem[] = [
     {
         title: "DataHome",
         path: "/",
-        icon: <Icon icon="mi" />,
+        icon: <Icon icon="line-md:home-md-twotone" />,
     },
     {
         title: "X",
