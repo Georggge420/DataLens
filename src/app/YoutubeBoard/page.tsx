@@ -29,7 +29,7 @@ export default function Youtubeboard() {
   return (
         <div className='p-2'>
             
-            <div className="p-5 text-left text-grisOscuro text-2xl font-bold">
+            <div className="p-5 text-left text-grisOscuro text-2xl font-bold font-bungee">
                 YOUTUBE
             </div>
 
@@ -39,7 +39,7 @@ export default function Youtubeboard() {
             
             <div className='p-7 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4'>
 
-                <p className="text-justify font-semibold italic xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs lg:col-span-4">
+                <p className="text-justify font-semibold font-exo xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs lg:col-span-4">
                     Con esta herramienta podrás buscar las etiquetas más populares al buscar un video en youtube. Solo ingresa la palabra clave y presiona buscar.
                 </p>
 

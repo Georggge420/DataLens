@@ -37,7 +37,7 @@ export default function Home() {
       <div className="sm:p-10 xs:p-2 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1">
 
         <div className="p-4 lg:col-span-4 sm:col-span-2 xs:col-span-1 ">
-          <p className="text-justify font-semibold italic xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs">
+          <p className="text-justify font-semibold xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs font-exo">
           "Bienvenido a nuestra plataforma de análisis de redes sociales. Aquí encontrarás una poderosa herramienta que te permitirá monitorizar y extraer datos valiosos de las principales plataformas de social media. Nuestro sistema de webscrapping avanzado te brindará información detallada sobre tendencias, sentimientos, interacciones y métricas clave para impulsar tus estrategias digitales."
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
 
         <div className="bg-grisClaro p-5 rounded-xl">
             <div className="text-negroOscuro my-5 text-center text-xl font-bold flex items-center">Nuevas Caracteristicas listas <Icon icon="line-md:bell-alert-loop" className='ms-1' height="2em" color="gray"/></div>
-            <p className="text-justify m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque doloremque similique fuga dignissimos totam perferendis sequi nam, repellat impedit ipsa soluta quis delectus possimus sapiente esse corrupti at accusamus error.</p>
+            <p className="text-justify m-3 font-exo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque doloremque similique fuga dignissimos totam perferendis sequi nam, repellat impedit ipsa soluta quis delectus possimus sapiente esse corrupti at accusamus error.</p>
             
             
             <div className="flex justify-end mt-5">
@@ -101,7 +101,7 @@ export default function Home() {
 
       <div className="sm:p-10 xs:p-2 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1">
 
-          <p className="text-justify font-semibold italic xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs lg:col-span-4 sm:col-span-2 xs:col-span-1">
+          <p className="text-justify font-semibold font-exo xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs lg:col-span-4 sm:col-span-2 xs:col-span-1">
             Busca el contacto de la marca que buscas y obtén información sobre su presencia en redes sociales.
           </p>
 

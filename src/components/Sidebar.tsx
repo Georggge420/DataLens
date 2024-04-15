@@ -21,7 +21,7 @@ export const Sidebar = () => {
             className="flex flex-row space-x-3 items-center justify-center md:justify-start md:px-6 border-b border-zinc-200 bg-grisMedio h-12 w-full"
           >
             <Image src="/logo.svg" width={28} height={28} alt="logo" />
-            <span className="font-bold text-xl hidden md:flex">Datalens</span>
+            <span className="font-bold text-xl hidden md:flex font-bungee">Datalens</span>
           </Link>
   
           <div className="flex flex-col space-y-2  md:px-6">

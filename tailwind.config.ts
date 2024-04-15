@@ -32,6 +32,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         bungee: ['Bungee'],
+        exo: ['Exo 2'],
+        prompt: ['Prompt']
       },
 
       colors: {

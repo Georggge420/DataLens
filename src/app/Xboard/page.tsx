@@ -35,7 +35,7 @@ export default function Xboard() {
   return (
         <div className='p-2'>
             
-            <div className="p-5 text-left text-grisOscuro text-2xl font-bold">
+            <div className="p-5 text-left text-grisOscuro text-2xl font-bold font-bungee">
                 X
             </div>
 
@@ -43,7 +43,7 @@ export default function Xboard() {
                     Buscador de usuario
             </div>
 
-            <p className="px-7 text-justify font-semibold italic xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs lg:col-span-12 sm:col-span-2 xs:col-span-1">
+            <p className="px-7 text-justify font-semibold font-exo xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs lg:col-span-12 sm:col-span-2 xs:col-span-1">
                 Consulta la informacion del usuario de X que desees.
             </p>
             

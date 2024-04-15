@@ -51,7 +51,7 @@ export default function InstagramBoard() {
 
   return (
     <div className='p-2'>
-        <div className="p-5 text-left text-grisOscuro text-2xl font-bold">
+        <div className="p-5 text-left text-grisOscuro text-2xl font-bold font-bungee">
           Instagram
         </div>
 
@@ -63,7 +63,7 @@ export default function InstagramBoard() {
         <div className='lg:p-7 xs:p-4 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 xs:grid-cols-2'>
 
           <div className='flex items-center justify-center lg:col-span-4 xs:col-span-1'>
-            <p className="text-justify font-semibold italic xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs ">
+            <p className="text-justify font-semibold font-exo xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs ">
                   Este apartado te dejara buscar las ver el contenido mas populares en Instagram relacionado con palabras clave . Solo ingresa la palabra clave y presiona buscar.
             </p>
           </div>
@@ -105,7 +105,7 @@ export default function InstagramBoard() {
         <div className="lg:p-7 grid gap-4 lg:grid-auto-rows:minmax(0, auto); lg:grid-cols-4 xs:grid-cols-2">
 
             <div className='flex items-center justify-center lg:col-span-4 xs:col-span-2'>
-              <p className="text-justify font-semibold italic xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs ">
+              <p className="text-justify font-semibold font-exo xl:text-base/loose sm:text-base sm:tracking-wide sm:leading-normal xs:text-xs ">
                     Con esta herramienta sabras la informacion mas relevante de un hashtag en Instagram. Solo ingresa el hashtag y presiona buscar.
               </p>
             </div>
