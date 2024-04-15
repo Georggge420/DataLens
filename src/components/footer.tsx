@@ -9,21 +9,21 @@ const Footer = () => {
 
     const footerNavs = [
         {
-            href: 'javascript:void()',
+            href: '/support',
             name: 'Soporte'
         },
         {
-            href: 'javascript:void()',
+            href: '/tech',
             name: 'Tecnologias'
         },
         {
-            href: 'javascript:void()',
+            href: '/team',
             name: 'Equipo'
         },
     ]
 
     return (
-        <footer className="text-negroOscuro bg-blancoOpaco px-4 py-5 mx-full md:px-8">
+        <footer className="text-blancoClaro bg-grisOscuro px-4 py-5 mx-full md:px-8 dark:bg-negro40 dark:text-blanco">
             <div className="max-w-lg sm:mx-auto sm:text-center flex items-center justify-center">
                 <Image src="/logo.svg" alt="logo" width={28} height={28} />
                 <p className='text-bold ms-3 font-bungee'>DataLens</p>
@@ -32,7 +32,7 @@ const Footer = () => {
             <ul className="items-center justify-center mt-3 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
                 {
                     footerNavs.map((item, idx) => (
-                        <li className=" hover:text-grisBajoMedio">
+                        <li className=" hover:text-grisBajoMedio dark:hover:text-purpura">
                             <Link key={idx} href={item.href}>
                                 { item.name }
                             </Link>
@@ -43,7 +43,7 @@ const Footer = () => {
 
             <div className="mt-3 items-center justify-center sm:flex">
                 <div className="mt-4 sm:mt-0">
-                    &copy; 2024.
+                    &copy; Cafeine Codders 2024.
                 </div>
             </div>
         </footer>

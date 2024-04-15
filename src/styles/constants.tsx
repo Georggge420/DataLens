@@ -23,41 +23,19 @@ export const SIDEVARITEMS: SideNavItem[] = [
         icon: <Icon icon="mdi:youtube" />,
     },
     {
-        title: "Configuracion",
-        icon: <Icon icon="ant-design:setting-outlined" />,
+        title: "Tema",
+        icon: <Icon icon="flowbite:moon-solid" />,
         submenu: true,
         level: 1,
         subMenuItems: [
-            {
-                title: "Idioma",
-                icon: <Icon icon="flowbite:arrow-sort-letters-outline" />,
-                submenu: true,
-                level: 2,
-                subMenuItems: [
-
-                    {title: "Español",
-                    level: 3,
-                    },
-
-                    {title: "Ingles",
-                    level: 3,
-                    }
-                ]
+            {title: "Claro",
+            level: 2,
+            value: "light",
             },
-            {
-                title: "Tema",
-                icon: <Icon icon="flowbite:moon-solid" />,
-                submenu: true,
-                level: 2,
-                subMenuItems: [
-                    {title: "Claro",
-                    level: 3,
-                    },
-                    {title: "Oscuro",
-                    level: 3,
-                    }
-                ]
-            },
+            {title: "Oscuro",
+            level: 2,
+            value: "dark",
+            }
         ],
     },
 

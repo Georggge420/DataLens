@@ -5,4 +5,6 @@ export type SideNavItem = {
     submenu?: boolean;
     subMenuItems?: SideNavItem[];
     level?: number;
+    onClick?: () => void;
+    value?: string;
 }

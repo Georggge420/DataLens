@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -45,6 +46,18 @@ const config: Config = {
         'grisClaro': '#C9D6DF',
         'grisBajoMedio': '#BFC7D1',
         'grisOscuro': '#52616B',
+
+        // modo oscuro
+        'morado': '#6A00FF',
+        'purpura': '#A64AFF',
+        'rosa': '#FFB1FF',
+        'aqua': '#00E5FF',
+        'aquaOscuro': '#00829B',
+        'Negro1A': '#1A1A1A',
+        "negroMedio": "#292929",
+        'negro40':'#404040',
+        'blanco':'#FFFFFF',
+        'gris':'#E0E0E0',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
