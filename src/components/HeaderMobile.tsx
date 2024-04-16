@@ -53,7 +53,7 @@ const HeaderMobile = () => {
       ref={containerRef}
     >
       <motion.div
-        className="absolute inset-0 right-0 w-full bg-white"
+        className="absolute inset-0 right-0 w-full bg-blancoClaro dark:bg-negroMedio"
         variants={sidebar}
       />
       <motion.ul
@@ -143,7 +143,7 @@ const MenuItem = ({
   children?: ReactNode;
 }) => {
   return (
-    <motion.li variants={MenuItemVariants} className={className}>
+    <motion.li variants={MenuItemVariants} className={`${className} dark:text-blanco`}>
       {children}
     </motion.li>
   );
@@ -155,6 +155,14 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
 }) => {
   const pathname = usePathname();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
+
+  function toggleTema(value:string){
+    if(value === 'dark'){
+      document.querySelector('html')?.classList.add('dark');
+    } else {
+      document.querySelector('html')?.classList.remove('dark');
+    }
+  }
 
   return (
     <>
@@ -181,15 +189,15 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
             {item.subMenuItems?.map((subItem, subIdx) => {
               return (
                 <MenuItem key={subIdx}>
-                  <Link
-                    href={subItem.path || ""}
-                    onClick={() => toggleOpen()}
-                    className={` ${
-                      subItem.path === pathname ? 'font-bold' : ''
-                    }`}
-                  >
-                    {subItem.title}
-                  </Link>
+                  {subItem.title === 'Claro' || subItem.title === 'Oscuro' ? (
+                          <button onClick={() => toggleTema(subItem.value || "")} className='m-1'>
+                            <span>{subItem.title}</span>
+                          </button>
+                        ) : (
+                          <Link href={subItem.path || ""}>
+                            <span>{subItem.title}</span>
+                          </Link>
+                        )}
                 </MenuItem>
               );
             })}

@@ -13,7 +13,7 @@ export const Sidebar = () => {
   const configItem = SIDEVARITEMS[SIDEVARITEMS.length - 1];
 
   return (
-      <div className="w-fit bg-blancoOpaco dark:bg-negroMedio h-screen flex-1 fixed dark:border-0 hidden md:flex flex-col justify-between z-40">
+      <div className="md:w-min-content z-40 bg-blancoOpaco dark:bg-negroMedio h-screen flex-1 fixed dark:border-0 hidden md:flex flex-col justify-between">
         <div className="flex flex-col space-y-6 w-full">  
           <Link
             href="/"
@@ -95,16 +95,16 @@ const MenuItem = ({item}:{item: SideNavItem}) => {
                       </Link>
                     )}
 
-                    {subItem.subMenuItems?.map((thirdLevelItem, idx) => {
+                    {subItem.subMenuItems?.map((item, idx) => {
                       return (
                         <div key={idx} className="relative">
-                          {thirdLevelItem.title === 'Claro' || thirdLevelItem.title === 'Oscuro' ? (
-                            <button onClick={() => toggleTema(thirdLevelItem.value || "")}>
-                              <span>{thirdLevelItem.title}</span>
+                          {item.title === 'Claro' || item.title === 'Oscuro' ? (
+                            <button onClick={() => toggleTema(item.value || "")}>
+                              <span>{item.title}</span>
                             </button>
                           ) : (
-                            <Link href={thirdLevelItem.path || ""}>
-                              <span>{thirdLevelItem.title}</span>
+                            <Link href={item.path || ""}>
+                              <span>{item.title}</span>
                             </Link>
                           )}
                         </div>

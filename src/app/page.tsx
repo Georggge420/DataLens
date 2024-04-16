@@ -79,9 +79,9 @@ export default function Home() {
           <Icon icon="line-md:alert-circle-loop" className='me-1' height="2em" color="gray"/> Novedades
       </div>
 
-      <div className="p-5 grid lg:grid-cols-2 lg:grid-rows-1 xs:grid-rows-2 gap-5">
+      <div className="p-5 grid lg:grid-cols-2 lg:grid-rows-1 xs:grid-rows-2 xs:grid-cols-1 gap-5">
 
-        <div className="bg-grisClaro dark:bg-negro40 p-5 rounded-xl">
+        <div className="bg-grisClaro dark:bg-negro40 p-5 rounded-xl xs:col-span-1">
             <div className="text-negroOscuro mb-5 text-center text-xl font-bold font-exo flex items-center dark:text-blanco">Nuevas Caracteristicas listas <Icon icon="line-md:bell-alert-loop" className='ms-1' height="2em" color="gray"/></div>
 
             <div className="p-5">
@@ -110,7 +110,7 @@ export default function Home() {
 
         </div>
 
-          <div className="relative h-full w-full max-h-[400px]">
+          <div className="relative h-full w-full max-h-[400px] xs:col-span-1">
             <Image
               src="/illustrations/main-illustration-2.svg"
               alt="Proyections"
