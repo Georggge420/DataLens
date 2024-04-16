@@ -9,11 +9,21 @@ import moment from 'moment';
 import { Icon } from '@iconify/react';
 import clsx from 'clsx';
 
+interface UserData {
+    profile_image_url_https: string;
+    is_blue_verified: boolean;
+    created_at: string;
+    favourites_count: number;
+    followers_count: number;
+    media_count: number;
+    possibly_sensitive: boolean;
+  }
+
 
 export default function Xboard() {
 
     const [username, setUsername] = useState('');
-    const [userData, setUserData] = useState(null);
+    const [userData, setUserData] = useState<UserData | null>(null);
     const [userNotFound, setUserNotFound] = useState(false);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {

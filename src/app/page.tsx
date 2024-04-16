@@ -7,6 +7,19 @@ import Link from 'next/link';
 import {ButtonSPrimary} from "@/components/dataForms";
 import Slider from "react-slick";
 
+  interface MarkData {
+    result: {
+      linkedin: string;
+      twitter: string;
+      facebook: string;
+      youtube: string;
+      instagram: string;
+      github: string;
+      snapchat: string;
+      tiktok: string;
+    };
+  }
+
 export default function Home() {
 
     const settings = {
@@ -18,17 +31,21 @@ export default function Home() {
     };
 
     const [mark, setMark] = useState('');
-    const [markData, setMarkData] = useState(null);
+    const [markData, setMarkData] = useState<MarkData | null>(null);
     const inputRef = useRef(null);
     const [errorInfo, setErrorInfo] = useState('');
-
+    
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setMarkData(null);
     errorInfo && setErrorInfo('');
+    const inputRef = useRef<HTMLInputElement>(null);
 
-    const mark = inputRef.current.value;
-    
+    let mark = '';
+    if (inputRef && inputRef.current) {
+      mark = inputRef.current.value;
+    }
+            
     if (!mark) {
       setErrorInfo('Por favor ingrese una marca');
       return;
