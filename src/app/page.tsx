@@ -32,14 +32,13 @@ export default function Home() {
 
     const [mark, setMark] = useState('');
     const [markData, setMarkData] = useState<MarkData | null>(null);
-    const inputRef = useRef(null);
+    const inputRef = useRef<HTMLInputElement>(null);
     const [errorInfo, setErrorInfo] = useState('');
     
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setMarkData(null);
     errorInfo && setErrorInfo('');
-    const inputRef = useRef<HTMLInputElement>(null);
 
     let mark = '';
     if (inputRef && inputRef.current) {
