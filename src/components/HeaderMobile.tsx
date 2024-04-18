@@ -98,30 +98,38 @@ export default HeaderMobile;
 const MenuToggle = ({ toggle }: { toggle: any }) => (
   <button
     onClick={toggle}
-    className="pointer-events-auto absolute right-4 top-[14px] z-30"
+    className="flex items-center justify-center pointer-events-auto absolute right-4 top-[14px] z-30 bg-negroClaro rounded-md dark:bg-purpura"
   >
-    <svg width="23" height="23" viewBox="0 0 23 23">
+    <div className='flex items-center justify-center m-0 p-1'>
+      <svg width="22" height="20" viewBox="0 0 22 20">
       <Path
-        variants={{
-          closed: { d: 'M 2 2.5 L 20 2.5' },
-          open: { d: 'M 3 16.5 L 17 2.5' },
-        }}
-      />
-      <Path
-        d="M 2 9.423 L 20 9.423"
-        variants={{
-          closed: { opacity: 1 },
-          open: { opacity: 0 },
-        }}
-        transition={{ duration: 0.1 }}
-      />
-      <Path
-        variants={{
-          closed: { d: 'M 2 16.346 L 20 16.346' },
-          open: { d: 'M 3 2.5 L 17 16.346' },
-        }}
-      />
-    </svg>
+          fill="white"
+          stroke="white"
+          variants={{
+            closed: { d: 'M 2 2.5 L 20 2.5' },
+            open: { d: 'M 4 16.5 L 18 2.5' },
+          }}
+        />  
+        <Path
+          fill="white"
+          stroke="white"
+          d="M 2 9.423 L 20 9.423"
+          variants={{
+            closed: { opacity: 1 },
+            open: { opacity: 0 },
+          }}
+          transition={{ duration: 0.2 }}
+        />
+        <Path
+          fill="white"
+          stroke="white"
+          variants={{
+            closed: { d: 'M 2 16.346 L 20 16.346' },
+            open: { d: 'M 4 2.5 L 18 16.346' },
+          }}
+        />
+      </svg>
+    </div>
   </button>
 );
 

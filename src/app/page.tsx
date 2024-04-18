@@ -4,8 +4,9 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import { useRef, useState } from 'react';
 import Link from 'next/link';
-import {ButtonSPrimary} from "@/components/dataForms";
+import {ButtonSPrimary, CustomInput} from "@/components/dataForms";
 import Slider from "react-slick";
+
 
   interface MarkData {
     result: {
@@ -32,18 +33,14 @@ export default function Home() {
 
     const [mark, setMark] = useState('');
     const [markData, setMarkData] = useState<MarkData | null>(null);
-    const inputRef = useRef<HTMLInputElement>(null);
     const [errorInfo, setErrorInfo] = useState('');
+    const inputRef = useRef<HTMLInputElement>(null);
     
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setMarkData(null);
     errorInfo && setErrorInfo('');
-
-    let mark = '';
-    if (inputRef && inputRef.current) {
-      mark = inputRef.current.value;
-    }
+    
             
     if (!mark) {
       setErrorInfo('Por favor ingrese una marca');
@@ -150,11 +147,12 @@ export default function Home() {
 
           <div className="lg:col-span-2 h-full w-full relative flex items-center justify-center">
             <form onSubmit={handleSubmit} className="p-5 grid gap-4 lg:grid-cols-8 lg:grid-rows-1 xs:grid-cols-1 xs:grid-rows-2">
-              <input 
-                type="text" 
-                ref={inputRef}
-                placeholder="Nombre de la marca"
-                className="text-center p-2 w-full bg-grisClaro rounded-lg text-negroOscuro text-base font-bold lg:col-span-5 xs:col-span-1 xs:row-span-1"
+            <CustomInput
+                        type="text"
+                        value={mark}
+                        setValue={setMark}
+                        placeholder='...'
+                        className='lg:col-span-5 xs:col-span-1 xs:row-span-1'
               />
               <ButtonSPrimary type='submit' text='Buscar' className='bg-grisClaro col-span-12 lg:col-span-3 xs:col-span-1 xs:row-span-1'/>
             </form>
