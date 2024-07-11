@@ -1,0 +1,343 @@
+{
+  "id": "5c60511c-b1de-4ad4-ad42-ca54a9334b26",
+  "version": "2.0",
+  "name": "DataLens",
+  "url": "https://data-lens.vercel.app",
+  "tests": [{
+    "id": "34de33c7-3c80-4659-b95c-4c5e43542a45",
+    "name": "SideBar Test",
+    "commands": [{
+      "id": "aa1aacb9-44fa-494f-97e2-9cb2799d0623",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d34b830-012a-43c5-91dd-07c8263fdac5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x687",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f611e3fb-b8b5-486b-aa23-f86099f61ea1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hidden:nth-child(2)",
+      "targets": [
+        ["css=.hidden:nth-child(2)", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af9e642f-e776-43b7-b385-f93a2ceea1b8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=X",
+      "targets": [
+        ["linkText=X", "linkText"],
+        ["css=.relative:nth-child(2) > .flex", "css:finder"],
+        ["xpath=//a[contains(@href, '/Xboard')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0496b78-e333-405d-a38f-03d935c2d0da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.relative:nth-child(3) .font-semibold",
+      "targets": [
+        ["css=.relative:nth-child(3) .font-semibold", "css:finder"],
+        ["xpath=//div[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Instagram')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4e6365a-6b94-401e-94df-549f01eb3d7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.relative:nth-child(4) .font-semibold",
+      "targets": [
+        ["css=.relative:nth-child(4) .font-semibold", "css:finder"],
+        ["xpath=//div[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'YouTube')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52bce948-d73c-429a-9b92-dadb796d0f89",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flex > .flex > .font-semibold",
+      "targets": [
+        ["css=.flex > .flex > .font-semibold", "css:finder"],
+        ["xpath=//div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Tema')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "32ffd366-f752-422f-bde0-0b6312a2f2b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.relative:nth-child(2) > button > .dark\\3Atext-blanco",
+      "targets": [
+        ["css=.relative:nth-child(2) > button > .dark\\3Atext-blanco", "css:finder"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Oscuro')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8366c44e-51f2-4a16-968f-00de8b4715e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.relative:nth-child(3) .font-semibold",
+      "targets": [
+        ["css=.relative:nth-child(3) .font-semibold", "css:finder"],
+        ["xpath=//div[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Instagram')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16bec764-bf78-4327-b8db-fb4db3e6df22",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.relative:nth-child(3) .font-semibold",
+      "targets": [
+        ["css=.relative:nth-child(3) .font-semibold", "css:finder"],
+        ["xpath=//div[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Instagram')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cf5f2d9-b82c-46b3-b84d-2870cf6b741e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.bg-grisOscuro > .font-semibold",
+      "targets": [
+        ["css=.bg-grisOscuro > .font-semibold", "css:finder"],
+        ["xpath=//div[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Instagram')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30cf3aef-5d96-49fa-8e6e-7da257df613b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=X",
+      "targets": [
+        ["linkText=X", "linkText"],
+        ["css=.relative:nth-child(2) > .flex", "css:finder"],
+        ["xpath=//a[contains(@href, '/Xboard')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3612cbd-db0d-48a3-89aa-278e6c0fed5d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=DataHome",
+      "targets": [
+        ["linkText=DataHome", "linkText"],
+        ["css=.relative:nth-child(1) > .space-x-4", "css:finder"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'DataHome')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01c02c59-e32c-4a7f-86d8-187d3495b0ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hidden:nth-child(2)",
+      "targets": [
+        ["css=.hidden:nth-child(2)", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9aae130b-9f8e-4448-8313-64678b712d1e",
+    "name": "SideBar small screen test",
+    "commands": [{
+      "id": "afcea17b-da28-4f48-a9e2-8b57b77e7360",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ee6f808-ecae-499e-a844-8c2fef6c95e7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x672",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98e5a692-28c1-4494-9cef-c46a601204ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.m-0",
+      "targets": [
+        ["css=.m-0", "css:finder"],
+        ["xpath=//nav/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac9bec61-bdae-4131-9f1f-1d88f7510723",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=X",
+      "targets": [
+        ["linkText=X", "linkText"],
+        ["css=div:nth-child(2) > .undefined > .flex", "css:finder"],
+        ["xpath=//a[contains(text(),'X')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/Xboard')])[2]", "xpath:href"],
+        ["xpath=//div[2]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90739ebe-1cde-402b-b578-90165d7e8ef5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-center > svg",
+      "targets": [
+        ["css=.justify-center > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3229aff5-b729-4a22-8f4b-598c5caa80dd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Instagram",
+      "targets": [
+        ["linkText=Instagram", "linkText"],
+        ["css=div:nth-child(3) > .undefined > .flex", "css:finder"],
+        ["xpath=//a[contains(text(),'Instagram')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/instagramBoard')])[2]", "xpath:href"],
+        ["xpath=//div[3]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b617726d-b2fe-4559-a751-506a90984f57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-center > svg",
+      "targets": [
+        ["css=.justify-center > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a22dfc4-5f5e-4393-9013-95a9cf36fd4d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=YouTube",
+      "targets": [
+        ["linkText=YouTube", "linkText"],
+        ["css=div:nth-child(4) > .undefined > .flex", "css:finder"],
+        ["xpath=//a[contains(text(),'YouTube')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/YoutubeBoard')])[2]", "xpath:href"],
+        ["xpath=//div[4]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd95d27c-a1dd-42f8-a3ee-b17b46534172",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-center > svg",
+      "targets": [
+        ["css=.justify-center > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bd2607c-d1ac-4275-b036-8c82089b8f82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-2xl > .flex",
+      "targets": [
+        ["css=.text-2xl > .flex", "css:finder"],
+        ["xpath=//li/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc6d0abc-5541-4593-b14c-9779e74072dc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.undefined:nth-child(2) span",
+      "targets": [
+        ["css=.undefined:nth-child(2) span", "css:finder"],
+        ["xpath=//li[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Oscuro')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc544668-6754-461b-9b14-7d52adde33c1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Instagram",
+      "targets": [
+        ["linkText=Instagram", "linkText"],
+        ["css=div:nth-child(3) > .undefined > .flex", "css:finder"],
+        ["xpath=//a[contains(text(),'Instagram')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/instagramBoard')])[2]", "xpath:href"],
+        ["xpath=//div[3]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82fa240b-d718-4b55-b8bf-f7c0c0bab0c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-center > svg",
+      "targets": [
+        ["css=.justify-center > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "54f49783-332e-4907-b1d2-d0ef9d2f27fe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=X",
+      "targets": [
+        ["linkText=X", "linkText"],
+        ["css=div:nth-child(2) > .undefined > .flex", "css:finder"],
+        ["xpath=//a[contains(text(),'X')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/Xboard')])[2]", "xpath:href"],
+        ["xpath=//div[2]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b315c23-1d8d-4809-aea0-20cf1c69b6d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=svg > path:nth-child(2)",
+      "targets": [
+        ["css=svg > path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "22ac3c3d-bd71-4d80-8e2a-a9dd34e1937e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=DataHome",
+      "targets": [
+        ["linkText=DataHome", "linkText"],
+        ["css=div:nth-child(1) > .undefined > .flex", "css:finder"],
+        ["xpath=//a[contains(text(),'DataHome')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[7]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "09f825d3-e995-4eda-ae90-564ddc1ed6a2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["34de33c7-3c80-4659-b95c-4c5e43542a45"]
+  }],
+  "urls": ["https://data-lens.vercel.app/"],
+  "plugins": []
+}
