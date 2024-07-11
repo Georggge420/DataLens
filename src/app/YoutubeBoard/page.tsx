@@ -7,10 +7,15 @@ import { Icon } from '@iconify/react';
 import { ButtonSPrimary, CustomInput } from '@/components/dataForms';
 import Link from 'next/link';
 
+type WordData = {
+    search_term: string;
+    tags: string[];
+  };
+
 export default function Youtubeboard() {
 
     const [word, setword] = useState('');
-    const [wordData, setWordData] = useState(null);
+    const [wordData, setWordData] = useState<WordData | null>(null);
     const [errorInfo, setErrorInfo] = useState('');
 
     const handleSubmit = async(event: React.FormEvent<HTMLFormElement>) => {

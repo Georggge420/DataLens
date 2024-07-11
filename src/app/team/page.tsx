@@ -28,7 +28,7 @@ export default function tech() {
                     {pana.name}
                 </div>
 
-                <Image src={pana.imgPath} width={100} height={100} alt='foto' className='m-5 rounded-3xl'/>
+                <Image src={pana.imgPath} width={100} height={100} alt='foto' className='m-5 rounded-3xl relative'/>
                 <p className='p-5 font-bold font-exo'>{pana.text}</p>
                 <p className='p-5 font-exo text-right italic'>{pana.frase}</p>
             </div>

@@ -53,7 +53,7 @@ const HeaderMobile = () => {
       ref={containerRef}
     >
       <motion.div
-        className="absolute inset-0 right-0 w-full bg-white"
+        className="absolute inset-0 right-0 w-full bg-blancoClaro dark:bg-negroMedio"
         variants={sidebar}
       />
       <motion.ul
@@ -98,30 +98,38 @@ export default HeaderMobile;
 const MenuToggle = ({ toggle }: { toggle: any }) => (
   <button
     onClick={toggle}
-    className="pointer-events-auto absolute right-4 top-[14px] z-30"
+    className="flex items-center justify-center pointer-events-auto absolute right-4 top-[14px] z-30 bg-negroClaro rounded-md dark:bg-purpura"
   >
-    <svg width="23" height="23" viewBox="0 0 23 23">
+    <div className='flex items-center justify-center m-0 p-1'>
+      <svg width="22" height="20" viewBox="0 0 22 20">
       <Path
-        variants={{
-          closed: { d: 'M 2 2.5 L 20 2.5' },
-          open: { d: 'M 3 16.5 L 17 2.5' },
-        }}
-      />
-      <Path
-        d="M 2 9.423 L 20 9.423"
-        variants={{
-          closed: { opacity: 1 },
-          open: { opacity: 0 },
-        }}
-        transition={{ duration: 0.1 }}
-      />
-      <Path
-        variants={{
-          closed: { d: 'M 2 16.346 L 20 16.346' },
-          open: { d: 'M 3 2.5 L 17 16.346' },
-        }}
-      />
-    </svg>
+          fill="white"
+          stroke="white"
+          variants={{
+            closed: { d: 'M 2 2.5 L 20 2.5' },
+            open: { d: 'M 4 16.5 L 18 2.5' },
+          }}
+        />  
+        <Path
+          fill="white"
+          stroke="white"
+          d="M 2 9.423 L 20 9.423"
+          variants={{
+            closed: { opacity: 1 },
+            open: { opacity: 0 },
+          }}
+          transition={{ duration: 0.2 }}
+        />
+        <Path
+          fill="white"
+          stroke="white"
+          variants={{
+            closed: { d: 'M 2 16.346 L 20 16.346' },
+            open: { d: 'M 4 2.5 L 18 16.346' },
+          }}
+        />
+      </svg>
+    </div>
   </button>
 );
 
@@ -143,7 +151,7 @@ const MenuItem = ({
   children?: ReactNode;
 }) => {
   return (
-    <motion.li variants={MenuItemVariants} className={className}>
+    <motion.li variants={MenuItemVariants} className={`${className} dark:text-blanco`}>
       {children}
     </motion.li>
   );
@@ -155,6 +163,14 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
 }) => {
   const pathname = usePathname();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
+
+  function toggleTema(value:string){
+    if(value === 'dark'){
+      document.querySelector('html')?.classList.add('dark');
+    } else {
+      document.querySelector('html')?.classList.remove('dark');
+    }
+  }
 
   return (
     <>
@@ -181,15 +197,15 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
             {item.subMenuItems?.map((subItem, subIdx) => {
               return (
                 <MenuItem key={subIdx}>
-                  <Link
-                    href={subItem.path || ""}
-                    onClick={() => toggleOpen()}
-                    className={` ${
-                      subItem.path === pathname ? 'font-bold' : ''
-                    }`}
-                  >
-                    {subItem.title}
-                  </Link>
+                  {subItem.title === 'Claro' || subItem.title === 'Oscuro' ? (
+                          <button onClick={() => toggleTema(subItem.value || "")} className='m-1'>
+                            <span>{subItem.title}</span>
+                          </button>
+                        ) : (
+                          <Link href={subItem.path || ""}>
+                            <span>{subItem.title}</span>
+                          </Link>
+                        )}
                 </MenuItem>
               );
             })}

@@ -4,8 +4,22 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import { useRef, useState } from 'react';
 import Link from 'next/link';
-import {ButtonSPrimary} from "@/components/dataForms";
+import {ButtonSPrimary, CustomInput} from "@/components/dataForms";
 import Slider from "react-slick";
+
+
+  interface MarkData {
+    result: {
+      linkedin: string;
+      twitter: string;
+      facebook: string;
+      youtube: string;
+      instagram: string;
+      github: string;
+      snapchat: string;
+      tiktok: string;
+    };
+  }
 
 export default function Home() {
 
@@ -18,17 +32,16 @@ export default function Home() {
     };
 
     const [mark, setMark] = useState('');
-    const [markData, setMarkData] = useState(null);
-    const inputRef = useRef(null);
+    const [markData, setMarkData] = useState<MarkData | null>(null);
     const [errorInfo, setErrorInfo] = useState('');
-
+    const inputRef = useRef<HTMLInputElement>(null);
+    
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setMarkData(null);
     errorInfo && setErrorInfo('');
-
-    const mark = inputRef.current.value;
     
+            
     if (!mark) {
       setErrorInfo('Por favor ingrese una marca');
       return;
@@ -79,9 +92,9 @@ export default function Home() {
           <Icon icon="line-md:alert-circle-loop" className='me-1' height="2em" color="gray"/> Novedades
       </div>
 
-      <div className="p-5 grid lg:grid-cols-2 lg:grid-rows-1 xs:grid-rows-2 gap-5">
+      <div className="p-5 grid lg:grid-cols-2 lg:grid-rows-1 xs:grid-rows-2 xs:grid-cols-1 gap-5">
 
-        <div className="bg-grisClaro dark:bg-negro40 p-5 rounded-xl">
+        <div className="bg-grisClaro dark:bg-negro40 p-5 rounded-xl xs:col-span-1">
             <div className="text-negroOscuro mb-5 text-center text-xl font-bold font-exo flex items-center dark:text-blanco">Nuevas Caracteristicas listas <Icon icon="line-md:bell-alert-loop" className='ms-1' height="2em" color="gray"/></div>
 
             <div className="p-5">
@@ -110,7 +123,7 @@ export default function Home() {
 
         </div>
 
-          <div className="relative h-full w-full max-h-[400px]">
+          <div className="relative h-full w-full max-h-[400px] xs:col-span-1">
             <Image
               src="/illustrations/main-illustration-2.svg"
               alt="Proyections"
@@ -134,11 +147,12 @@ export default function Home() {
 
           <div className="lg:col-span-2 h-full w-full relative flex items-center justify-center">
             <form onSubmit={handleSubmit} className="p-5 grid gap-4 lg:grid-cols-8 lg:grid-rows-1 xs:grid-cols-1 xs:grid-rows-2">
-              <input 
-                type="text" 
-                ref={inputRef}
-                placeholder="Nombre de la marca"
-                className="text-center p-2 w-full bg-grisClaro rounded-lg text-negroOscuro text-base font-bold lg:col-span-5 xs:col-span-1 xs:row-span-1"
+            <CustomInput
+                        type="text"
+                        value={mark}
+                        setValue={setMark}
+                        placeholder='...'
+                        className='lg:col-span-5 xs:col-span-1 xs:row-span-1'
               />
               <ButtonSPrimary type='submit' text='Buscar' className='bg-grisClaro col-span-12 lg:col-span-3 xs:col-span-1 xs:row-span-1'/>
             </form>

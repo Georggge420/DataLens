@@ -4,6 +4,23 @@ import { ButtonSPrimary, ButtonSSecond, CustomInput } from '@/components/dataFor
 import { Icon } from '@iconify/react/dist/iconify.js';
 import React, { useEffect, useState } from 'react';
 
+type PalabrasData = {
+  result: {
+    hashtags: Array<{
+      hashtag: {
+        name: string;
+        search_result_subtitle: string;
+      };
+    }>;
+  };
+};
+
+type TagData = {
+  simplifiedResult: {
+    name: string;
+    formatted_media_count: string;
+  };
+};
 
 export default function InstagramBoard() {
 
@@ -18,10 +35,10 @@ export default function InstagramBoard() {
   };
   
   const [palabra, setPalabra] = useState('');
-  const [palabrasData, setPalabrasData] = useState(null);
+  const [palabrasData, setPalabrasData] = useState<PalabrasData | null>(null);
 
   const [tag, setTag] = useState('');
-  const [tagData, setTagData] = useState(null);
+  const [tagData, setTagData] = useState<TagData | null>(null);
 
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [errorInfo, setErrorInfo] = useState('');
